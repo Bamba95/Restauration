@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Compte
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form [formGroup]="registerForm">
+  <ion-item>
+    <ion-label>Nom : </ion-label>
+    <ion-input type="text" formControlName="nom"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Prenom : </ion-label>
+    <ion-input type="text" formControlName="prenom"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Email : </ion-label>
+    <ion-input type="text" formControlName="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Password : </ion-label>
+    <ion-input type="text" formControlName="password"></ion-input>
+  </ion-item>
+  <ion-button type="submit" expand="block">Valider</ion-button>
+</form>
+</ion-content>

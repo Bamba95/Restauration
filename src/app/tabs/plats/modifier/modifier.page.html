@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button slot="start" (click)="back()"><ion-icon name="arrow-back"></ion-icon></ion-button>
+    <ion-title>Modifier le plat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #plat= "ngForm" (ngSubmit) ="onUpdate()" *ngIf="currentplat">
+    <ion-item>
+     <ion-label>Name :</ion-label>
+     <ion-input name="name" [(ngModel)] ="currentplat.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Prix :</ion-label>
+      <ion-input name = "prix" [(ngModel)] = "currentplat.prix"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Description :</ion-label>
+      <ion-input name = "description" [(ngModel)] ="currentplat.description"></ion-input>
+    </ion-item>
+    <ion-button expand="block" type="submit">Modifier</ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+   <ion-button slot="start" (click)="back()">
+     <ion-icon name="arrow-back">
+     </ion-icon>
+    </ion-button>
+    <ion-title>Ajouter un plat</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+ <form #plat= "ngForm" (ngSubmit) ="onAdd(plat.value)">
+    <ion-item>
+     <ion-label>Name : </ion-label>
+      <ion-input name="name" ngModel required></ion-input>
+    </ion-item>
+    <ion-item>
+     <ion-label>Prix : </ion-label>
+     <ion-input name = "prix" ngModel required></ion-input>
+    </ion-item>
+    <ion-item>
+     <ion-label>Description : </ion-label>
+     <ion-input name = "description" ngModel  required></ion-input>
+    </ion-item>
+   <ion-button expand="block" type="submit">Ajouter</ion-button>
+ </form>
+</ion-content>
